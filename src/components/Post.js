@@ -1,21 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
-const User = (props) => {
-    const { item, nav } = props;
+const Post = (props) => {
+    const {item, nav} = props;
 
     return <View style={[styles.container]}>
-              <Text>{item.name}</Text>
-              <Text>{item.email}</Text>
+              <Text>{item.id}</Text>
+              <Text>{item.title}</Text>
               <Button
                   title={'...details'}
                   onPress={() => {
-                      nav.navigate('User Details', {data: item}); // as the name of screen only & 'data' - assign by yourself
+                      nav.navigate('Post Details', {data: item});
                   }}
               />
            </View>;
 };
-export default User;
+export default Post;
 
 const styles = StyleSheet.create({
     container: {

@@ -6,6 +6,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 import {NavigationContainer} from "@react-navigation/native";
 import Posts from "./src/components/Posts";
 import UserDetails from "./src/components/UserDetails";
+import PostDetails from "./src/components/PostDetails";
 
 const StackNavigator = createStackNavigator();
 
@@ -13,8 +14,9 @@ export default function App() {
   return (
     <NavigationContainer>
         <StackNavigator.Navigator>
-            <StackNavigator.Screen name={'UsersBlock'} component={Users}/>
             <StackNavigator.Screen name={'PostsBlock'} component={Posts}/>
+            <StackNavigator.Screen name={'Post Details'} component={PostDetails}/>
+            <StackNavigator.Screen name={'UsersBlock'} component={Users}/>
             <StackNavigator.Screen name={'User Details'} component={UserDetails}/>
         </StackNavigator.Navigator>
     </NavigationContainer>

@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, View, Button, TouchableOpacity, FlatList} from 'react-native';
-import {getUsers} from "../api/API";
+import {getUsers} from "../api/userAPI";
 import User from "./User";
 
 const Users = (props) => {
     const {navigation} = props;
 
     const [ users, setUsers ] = useState([]);
-    console.log(users);
 
     async function takeData() { // take out separately
         const users = await getUsers();
