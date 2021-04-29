@@ -3,7 +3,9 @@ import {StyleSheet, Text, View, Button, TouchableOpacity, FlatList} from 'react-
 import {getUsers} from "../api/API";
 import User from "./User";
 
-const Users = () => {
+const Users = (props) => {
+    const {navigation} = props;
+
     const [ users, setUsers ] = useState([]);
     console.log(users);
 
@@ -19,7 +21,7 @@ const Users = () => {
   return <View>
             <FlatList
                 data={ users }
-                renderItem={({ item }) => <User item={ item }/>}
+                renderItem={({ item }) => <User nav={navigation} item={ item }/>}
                 keyExtractor={ item => '' + item.id }
             />
          </View>;
