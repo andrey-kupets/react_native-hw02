@@ -1,13 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {getUsers} from "./src/api/API";
+import Users from "./src/components/Users";
 
 export default function App() {
-
   return (
     <View>
-
+      <Users/>
     </View>
   );
 }
